@@ -17,7 +17,7 @@ const Todo = ({ todo, setTodo, setEdit }) => {
         return (
           <div className="customers" key={ todo._id }>
             <div
-              className={todo.isComplete ? "todo-row complete" : "todo-row"}
+              className={todo ? "todo-row complete" : "todo-row"}
               key={index}
             >
               <div >
@@ -46,36 +46,7 @@ const Todo = ({ todo, setTodo, setEdit }) => {
       })}
     </>
   );
-  // return todos.map((todo, index) => (
-  //   <div className="customers">
 
-  //     <div 
-  //       className={todo.isComplete ? "todo-row complete" : "todo-row"}
-  //       key={index}
-  //     >
-  //       <div >
-  //         {todo.priority}
-  //       </div>
-  //       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-  //         {todo.text}
-  //       </div>
-  //       <div className="icons">
-  //          {todo.date}
-  //          <div className="checkbox">
-  //         <Checkbox />
-  //         </div>
-  //         <TiEdit
-  //           onClick={() => {setEdit({ id: todo.id, value: todo.text ,priority:todo.priority,date:todo.date});}}
-  //           className="edit-icon" 
-  //         />
-  //         <RiCloseCircleLine
-  //           onClick={() => removeTodo(todo.id)}
-  //           className="delete-icon"
-  //         />
-  //       </div>
-  //     </div>
-  //   </div>
-  // ));
 };
 
 export default Todo;
